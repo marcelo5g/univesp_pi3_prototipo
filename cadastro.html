@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infância | Rotina</title>
+
+    <link rel="icon" href="./public/images/logo-icon.png">
+    <link rel="stylesheet" href="./public/css/main2.css">
+    <link rel="stylesheet" href="./public/css/header.css">
+    <link rel="stylesheet" href="./public/css/forms.css">
+    <link rel="stylesheet" href="./public/css/cadastro.css">
+    <link rel="stylesheet" href="./public/css/buttons.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+
+<body id="page-give-classes">
+    
+
+
+    <div id="container">
+        <header class="page-header">
+            <div class="top-bar-container">
+                <a href="/">
+                    <img src="./public/images/arrow-back.svg" alt="Voltar">
+                </a>
+            </div>
+
+            <div class="header-content">
+                <strong>Registro Diário</strong>
+                <p>É só preencher o formulário abaixo</p>
+            </div>
+
+        </header>
+
+        <main>
+            <form action="./end.html" id="create-class">
+                <fieldset>
+                    <legend>Dados do aluno</legend>
+
+                    <div class="input-block">
+                        <label for="name">Nome do aluno</label>
+                        <input name="name" id="name" required>
+                    </div>
+
+                    <div class="input-block">
+                        <label for="teacherName">Professora</label>
+                        <input name="teacherName" id="teacherName" required>
+                    </div>
+
+                    <div class="input-block">
+                        <label for="date">Data</label>
+                        <input type="date" name="date" id="date" required>
+                    </div>
+                                                     
+
+                </fieldset>
+
+
+                <fieldset>
+                    <legend>Rotina</legend>
+
+                    <div class="select-block">
+                        <label for="breakfast"> Café da Manhã </label>
+                        <select name="breakfast" id="breakfast" required>
+                            <option value="">Selecione uma Opção</option>
+                            <option value="1">Comeu Bem</option>
+                            <option value="2">Comeu Pouco</option>
+                            <option value="3">Recusou</option>
+                        </select>
+                    </div> 
+                    
+                    <div class="input-block">
+                        <label for="hidratacao">Hidratação</label>
+                        <input type="hidden" id="hidratacao" name="hidratacao" value="1" required>
+
+                        <div class="button-select">
+                            <button data-value="1"
+                                onclick="toggleSelect(event)" 
+                                type="button" 
+                                class="active">Sim</button>
+                            <button data-value="0"
+                                onclick="toggleSelect(event)" 
+                                type="button"
+                                >Não</button>
+                        </div>
+            
+                    </div>
+
+                    <div class="select-block">
+                        <label for="lunch"> Almoço </label>
+                        <select name="lunch" id="lunch" required>
+                            <option value="">Selecione uma Opção</option>
+                            <option value="1">Comeu Bem</option>
+                            <option value="2">Comeu Pouco</option>
+                            <option value="3">Recusou</option>
+                        </select>
+                    </div> 
+
+                    <div class="select-block">
+                        <label for="snack"> Lanche da Tarde </label>
+                        <select name="snack" id="snack" required>
+                            <option value="">Selecione uma Opção</option>
+                            <option value="1">Comeu Bem</option>
+                            <option value="2">Comeu Pouco</option>
+                            <option value="3">Recusou</option>
+                        </select>
+                    </div> 
+
+                    <div class="select-block">
+                        <label for="dinner"> Jantar </label>
+                        <select name="dinner" id="dinner" required>
+                            <option value="">Selecione uma Opção</option>
+                            <option value="1">Comeu Bem</option>
+                            <option value="2">Comeu Pouco</option>
+                            <option value="3">Recusou</option>
+                        </select>
+                    </div> 
+
+                    <div class="select-block">
+                        <label for="sono"> Sono </label>
+                        <select name="sono" id="sono" required>
+                            <option value="">Selecione uma Opção</option>
+                            <option value="1">Sim</option>
+                            <option value="2">Não</option>                            
+                        </select>
+                    </div> 
+
+
+                    <div class="select-block">
+                        <label for="evacuacao"> Evacuação </label>
+                        <select name="evacuacao" id="evacuacao" required>
+                            <option value="">Selecione uma opção</option>
+                            <option value="1">Normal</option>
+                            <option value="2">Pastoso</option>
+                            <option value="3">Diarreia</option>
+                            <option value="4">Não Evacuou</option>                            
+                        </select>
+                    </div>
+
+                    <div class="select-block">
+                        <label for="trocas"> Trocas de Fraldas </label>
+                        <select name="trocas" id="trocas" required>
+                            <option value="">Selecione uma Opção</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div> 
+
+                                  
+
+               
+                <footer>
+                    <p>
+                        <img src="./public/images/info-red.svg" alt="Aviso importante">
+                        Importante! <br> Preencha todos os dados
+                    </p>
+                    <!-- Preciso avisar o html que o botão irá enviar os dados do formuario (form=ID) acima -->
+                    <button type="submit" form="create-class">Salvar cadastro</button>
+                </footer>
+
+        </main>
+    </div>
+
+       
+    <script src="./public/scripts/yesOrNo.js"></script>
+
+</body>
+
+</html>

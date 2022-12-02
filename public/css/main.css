@@ -1,0 +1,42 @@
+/* Regra CSS
+body {
+    declaração
+    Propriedade: Valor;
+}
+
+# => Seletor de elemento Id
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    height: 100vh;
+    color: white;
+    background: #EBF2F5;
+    
+}
+
+:root {
+    /* Padrão do navegador: 16px */
+    font-size: 62.5%;       /* 62.5% equivale a 10px considerando o padrão 16px do Navegador  */
+}
+
+body, input, button, textarea {
+    font: 400 1.8rem/1 'Nunito', sans-serif;
+    /* font-size: 1.8rem;
+    rem = Root element - busca a porra do tamanho original do elemento root <html>
+    1 rem = Valor root definido em :root (ex: 16px), 2 rem seria = 32px
+    line-height: 1;
+    font-weight: 400;
+    font-family: 'Nunito', sans-serif; */
+}
+
+
+
+
